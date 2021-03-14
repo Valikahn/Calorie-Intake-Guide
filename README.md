@@ -1,4 +1,4 @@
-# Basal-Metabolic-Rate-Calculator
+# Calorie Intake Guide
 
 DISCLAIMER
 ----------
