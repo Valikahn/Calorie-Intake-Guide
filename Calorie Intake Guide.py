@@ -1,3 +1,12 @@
+# Copyright (C) 2020 - 2021 Valikahn <PiraticaTractatori@protonmail.ch> 
+# This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+# 
+# Website:  Coming soon
+# Github:   https://github.com/Valikahn/Calorie-Intake-Guide
+#
+# Calorie Intake Guide - pulling source data from https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation.
+# The program will show from basic input the estimated BMR, BMI and IBW.
+
 # Disclaimer
 print('DISCLAIMER')
 print('----------\n')
