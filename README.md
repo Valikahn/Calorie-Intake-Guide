@@ -4,8 +4,6 @@ DISCLAIMER
 ----------
 All information and tools presented within this site are intended for educational purposes. Any health, diet or exercise advice is not intended as medical diagnosis or treatment. If you think you have any type of medical condition you must seek professional advice even if you believe it may be due to diet, food or exercise. We are not a medical institute and therefore we will never offer/give any diagnosis or medical advice.
 
-NOTE:  These formulas are currently only calculating the male recomendations.
-
 How much should I weigh for my height and age?
 ----------------------------------------------
 
