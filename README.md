@@ -14,7 +14,7 @@ Your Ideal Body Weight is the result gives an indication of whether you’re a h
 
 Reference / Research
 --------------------
-Harris–Benedict Equation source information was sourced from various data points, but the majority of my research was at <a href="https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation">Wikipedia</a>, <a href="https://www.omnicalculator.com/health/bmr-harris-benedict-equation">Omni Calculator</a> and <a href="https://www.bmi-calculator.net/bmr-calculator/harris-benedict-equation/">BMI-Calculator</a>
+Harris–Benedict Equation source information was sourced from various data points, but the majority of my research was at <a href="https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation" target="_blank">Wikipedia</a>, <a href="https://www.omnicalculator.com/health/bmr-harris-benedict-equation" target="_blank">Omni Calculator</a> and <a href="https://www.bmi-calculator.net/bmr-calculator/harris-benedict-equation/" target="_blank">BMI-Calculator</a>
 
 Bugs & Issues
 -------------
