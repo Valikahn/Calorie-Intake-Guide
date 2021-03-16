@@ -6,7 +6,7 @@ All information and tools presented within this site are intended for educationa
 
 How much should I weigh for my height and age?
 ----------------------------------------------
-Basal Metabolic Rate is the number of calories required to keep your body functioning at rest. BMR is also known as your body’s metabolism; therefore, any increase to your metabolic weight, such as exercise, will increase your BMR. To get your BMR, simply input your height, age and weight. Once you’ve determined your BMR, you can begin to monitor how many calories a day you need to maintain or lose weight. 
+Basal Metabolic Rate is the number of calories required to keep your body functioning at rest. BMR is also known as your body’s metabolism; therefore, any increase to your metabolic weight, such as exercise, will increase your BMR. To get your BMR, simply input your height, age and weight. Once you’ve determined your BMR, you can begin to monitor how many calories a day you need to maintain or lose weight. This is the energy needed daily to maintain normal physiological function. 
 
 BMI is a reliable indicator of body fatness for most people. It is used to screen for weight categories that may lead to health problems. Including this widget on your application will allow people to calculate their BMI and see the corresponding weight category. It also provides information on what BMI is.
 
