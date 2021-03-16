@@ -12,6 +12,10 @@ BMI is a reliable indicator of body fatness for most people. It is used to scree
 
 Your Ideal Body Weight is the result gives an indication of whether you’re a healthy weight, and if not, how over or underweight you are. This is why we included the main measurments into our script, becuase BMI isn’t always the best measure to use because there are other things that you need to take into account when it comes to weight
 
+Reference / Research
+--------------------
+Harris–Benedict Equation source information was sourced from various data points, but the majority of my research was at <a href="https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation">Wikipedia</a>, <a href="https://www.omnicalculator.com/health/bmr-harris-benedict-equation">Omni Calculator</a> and <a href="https://www.bmi-calculator.net/bmr-calculator/harris-benedict-equation/">BMI-Calculator</a>
+
 Bugs & Issues
 -------------
 Please feel free to report any bugs or issues to us, email to: git@insentrica.net or <a href="https://github.com/Valikahn/Calorie-Intake-Guide/issues">Issues</a> on GitHub.
