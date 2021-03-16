@@ -1,5 +1,5 @@
 # Copyright (C) 2020 - 2021 Valikahn <git@insentrica.net>
-# Program Version 0.2 Alpha - Code Name: Amun
+# Program v0.2.1-alpha - Code Name: Amun
 # This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 # 
 # Website:  https://www.insentrica.net
@@ -16,7 +16,6 @@ print('Any health, diet or exercise advice is not intended as medical diagnosis 
 print('If you think you have any type of medical condition you must seek professional advice even if')
 print('you believe it may be due to diet, food or exercise. We are not a medical institute and')
 print('therefore we will never offer/give any diagnosis or medical advice.\n')
-print('NOTE: These formulas are currently only calculating the male recomendations.\n')
 
 # Imports
 import os
