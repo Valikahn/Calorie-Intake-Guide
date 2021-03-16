@@ -14,4 +14,4 @@ Your Ideal Body Weight is the result gives an indication of whether you’re a h
 
 Bugs & Issues
 -------------
-Please feel free to report any bugs or issues to us, email to: git@insentrica.net or open issues on Github.
+Please feel free to report any bugs or issues to us, email to: git@insentrica.net or <a href="https://github.com/Valikahn/Calorie-Intake-Guide/issues">Issues</a> on GitHub.
