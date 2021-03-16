@@ -19,4 +19,5 @@ Please feel free to report any bugs or issues to us, email to: git@insentrica.ne
 Licence
 -------
 Copyright (C) 2020 - 2021 Valikahn <git@insentrica.net>
+
 Licensed under the GPLv3 License.
