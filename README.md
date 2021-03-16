@@ -2,10 +2,12 @@
 
 DISCLAIMER
 ----------
-All information and tools presented within this site are intended for educational purposes. Any health, diet or exercise advice is not intended as medical diagnosis or treatment. If you think you have any type of medical condition you must seek professional advice even if you believe it may be due to diet, food or exercise. We are not a medical institute and therefore we will never offer/give any diagnosis or medical advice.
+All information and tools presented here and the use of "Calorie Intake Guide" are intended for educational purposes and what started as a self project to aid in my personal effort to lose weight became something I wanted to keep up-to-date via GitHub and to share.  Any health, diet or exercise advice is not intended as medical diagnosis or treatment. If you think you have any type of medical condition you must seek professional advice even if you believe it may be due to diet, food or exercise.  This is not a medical institute or an official government or professional body software and therefore we will never offer/give any diagnosis or medical advice.
 
-How much should I weigh for my height and age?
-----------------------------------------------
+How much should I (Valikahn) weigh for my height and age?
+---------------------------------------------------------
+There are key factors that I needed to take into effect - Basal Metabolic Rate (BMR), Body Mass Index (BMI), Metabolic Equivalent of a Task (MET) and Ideal Body Weight for Age and Height (IBW).  Answering a few questions this could be calculated, such as Age?  Height?  Weight?  Activity?  Activity Time?  Sex?  The outcome for this is different for men and woman and getting the correct formulas and equations was vital so not to confuse between me and my partner.  I have a section for reference and research that will show the different equations but I found the Harris-Benedict Equations more precice.
+
 Basal Metabolic Rate is the number of calories required to keep your body functioning at rest. BMR is also known as your body’s metabolism; therefore, any increase to your metabolic weight, such as exercise, will increase your BMR. To get your BMR, simply input your height, age and weight. Once you’ve determined your BMR, you can begin to monitor how many calories a day you need to maintain or lose weight. This is the energy needed daily to maintain normal physiological function. 
 
 BMI is a reliable indicator of body fatness for most people. It is used to screen for weight categories that may lead to health problems. Including this widget on your application will allow people to calculate their BMI and see the corresponding weight category. It also provides information on what BMI is.
