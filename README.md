@@ -12,6 +12,8 @@ Basal Metabolic Rate is the number of calories required to keep your body functi
 
 BMI is a reliable indicator of body fatness for most people. It is used to screen for weight categories that may lead to health problems. Including this widget on your application will allow people to calculate their BMI and see the corresponding weight category. It also provides information on what BMI is.
 
+The metabolic equivalent of task (MET) is the objective measure of the ratio of the rate at which a person expends energy, relative to the mass of that person, while performing some specific physical activity compared to a reference, set by convention at 3.5 mL of oxygen per kilogram per minute, which is roughly equivalent to the energy expended when sitting quietly.
+
 Your Ideal Body Weight is the result gives an indication of whether you’re a healthy weight, and if not, how over or underweight you are. This is why we included the main measurments into our script, becuase BMI isn’t always the best measure to use because there are other things that you need to take into account when it comes to weight
 
 Reference / Research
