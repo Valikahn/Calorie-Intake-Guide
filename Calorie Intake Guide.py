@@ -1,12 +1,15 @@
+# Colorie-Intake-Guide by Valikahn
+#
 # Copyright (C) 2020 - 2021 Valikahn <git@insentrica.net>
-# Program v0.2.1-alpha - Code Name: Amun
+# Program v0.3-alpha - Code Name: Amun
+# Licensed under the GPLv3 License.
 # This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 # 
 # Website:  https://www.insentrica.net
 # Github:   https://github.com/Valikahn/Calorie-Intake-Guide
-#
+# GPLv3 Licence:  https://www.gnu.org/licenses/gpl-3.0.en.html
+# 
 # Calorie Intake Guide - pulling source data from https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation.
-# The program will show from basic input the estimated BMR, BMI and IBW.
 
 # Disclaimer
 print('DISCLAIMER')
@@ -46,6 +49,9 @@ meta=200*60
 # Do while if yes or no
 answer = ''
 morf = ''
+metsubmit=''
+met=''
+
 while (answer!='yes' and answer!='no'):
   answer = input("Enter yes or no to continue: ").lower()
 
@@ -56,10 +62,62 @@ if answer == "yes":
     age = int(input('What is your age '+fname+' ? '))
     heightCM = int(input('What is your height in centimeters (CM) '+fname+' ? '))
     weightKG = int(input('What is you weight in kilograms (KG) '+fname+' ? '))
-    met = int(input('OK '+fname+', on average, on a scale of 1-10 how active are you per day? '))
-    timemin = int(input('How many minutes, on average are you active per day? '))
     morf = input("Enter your sex as male or female to continue: ").lower()
-    
+    print('\nNow we need to gauge how active you are per day.')
+    print('\nPress 0 - Not Active / No Exercise')
+    print('Press 1 - Sedentary Activity / Light Exercise')
+    print('Press 2 - Moderate Activity / Average Exercise')
+    print('Press 3 - Vigorous Activity / Workout Exercise')
+    print('Press 4 - Athlete Activity / Sports Competing Exercise')
+
+    # While True for met entry
+    while True:
+        metsubmit = int(input('\nPlease give an answer of 0-4: '))
+        if metsubmit == 0:
+            met=0
+            break
+        elif metsubmit == 1:
+            met=2
+            break
+        elif metsubmit == 2:
+            met=5
+            break
+        elif metsubmit == 3:
+            met=8
+            break
+        elif metsubmit == 4:
+            met=10
+            break
+        else: 
+            print('Invalid entry...  Try again...')
+            continue
+
+    timemin = int(input('\nHow many minutes, on average are you active per day? '))
+    print('\nNow we need want to know from you, what is your target weight loss per week.')
+    print('\nPress 1 - 0.5 lb per week')
+    print('Press 2 - 1.0 lb per week')
+    print('Press 3 - 1.5 lb per week')
+    print('Press 4 - 2.0 lb per week')
+
+    # While True for calsubmit entry
+    while True:
+        calsubmit = int(input('\nPlease give an answer of 0-4: '))
+        if calsubmit == 1:
+            calorie_lose=250
+            break
+        elif calsubmit == 2:
+            calorie_lose=500
+            break
+        elif calsubmit == 3:
+            calorie_lose=750
+            break
+        elif calsubmit == 4:
+            calorie_lose=1000
+            break
+        else:
+            print('Invalid entry...  Try again...')
+            continue
+
     # Calculation for each factor
     mw=mmw*weightKG
     mh=mmh*heightCM
@@ -67,66 +125,99 @@ if answer == "yes":
     ww=wmw*weightKG
     wh=wmh*heightCM
     wa=wma*age
-
-    # Male Equation formula
-    mbmranswer=mmbmr+mw+mh-ma
-    mbmr = str(round(mbmranswer, 0))
-    mbmianswer = weightKG/heightCM/heightCM*defi
-    mbmi = str(round(mbmianswer, 2))
-    mibwanswer = ibwform*heightCM*heightCM/defi
-    mibw = str(round(mibwanswer, 2))
-    timesecs = timemin*60
-    mmetanswer = timesecs*met*calmet*weightKG/meta
-    mmetadd = mmetanswer+mbmranswer
-    mmet = str(round(mmetadd, 0))
+    timesecs = timemin*60    
     
-    # Female Equation formula
-    wbmranswer=wmbmr+ww+wh-wa
-    wbmr = str(round(wbmranswer, 0))
-    wbmianswer = weightKG/heightCM/heightCM*defi
-    wbmi = str(round(wbmianswer, 2))
-    wibwanswer = ibwform*heightCM*heightCM/defi
-    wibw = str(round(wibwanswer, 2))
-    
+    # Continue for IF statement for male or female entry
     if morf == "male":
- 
-        # Male Section
-        #print('Male Entry')
+    
+        # Male Equation formula
+        mbmranswer=mmbmr+mw+mh-ma
+        mbmr = str(round(mbmranswer, 0))
+        mbmianswer = weightKG/heightCM/heightCM*defi
+        mbmi = str(round(mbmianswer, 2))
+        mibwanswer = ibwform*heightCM*heightCM/defi
+        mibw = str(round(mibwanswer, 1))
+        mmetanswer = timesecs*met*calmet*weightKG/meta
+        mmetadd = mmetanswer+mbmranswer
+        mmet = str(round(mmetadd, 0))
+        mcalorie_lose_answer = mmetadd-calorie_lose
+        mcalorie_lose = str(round(mcalorie_lose_answer))
+
         print('\nPlease wait '+fname+' working. . . . . . . . . . .')
         time.sleep(5)
         os.system("cls")
         print('This is your Calorie Intake Guide '+fname+'')
-        print('Your Age: '+str(age)+' | Your Height: '+str(heightCM)+'cm | Your Weight: '+str(weightKG)+'kg')
-        print('Your Activity Rate: '+str(met)+' | Your Activity Time: '+str(timemin)+' mins | Your Gender: '+str(morf))
+        #
+        print('\nYour Age: '+str(age)+' | Your Height: '+str(heightCM)+'cm | Your Weight: '+str(weightKG)+'kg | Your Activity Rate: '+str(met))
+        print('Your Activity Time: '+str(timemin)+' mins | Your Gender: '+str(morf)+' | Calorie Drop: '+str(calorie_lose))
+        print('\n------------------------------------------------------------------------------')
+        #
         print('\nYour estimated Basal Metabolic Rate (BMR) is: '+mbmr+' kcals')
         print('Your personal BMR formula is = 66.5 + ( 13.75 × '+str(weightKG)+' ) + ( 5.003 × '+str(heightCM)+' ) – ( 6.755 × '+str(age)+' )\n')
-        print('Your calorie intake to maintain body weight is:  '+str(mmet)+' - This is estimated based on your answers')
-        print('Your formula to maintan body weight is = '+str(timemin)+' × '+str(met)+' × '+str(calmet)+' × '+str(weightKG)+' / '+str(meta)+'\n')
-        print('Your Body Mass Index is: '+mbmi)
+        #
+        print('Your calorie intake to maintain body weight is: '+str(round(mmetanswer, 0))+' + '+str(round(mbmranswer, 0))+' = '+str(mmet)+' - This is estimated based on your answers!')
+        print('Your formula to maintan body weight is = '+str(timemin)+' × '+str(met)+' × '+str(calmet)+' × '+str(weightKG)+' / '+str(meta))
+        #
+        print('\nYou have chosen to lose '+str(calorie_lose)+' calories per day.')
+        print('To lose the desired weight your calorie intake per day should not exceed: '+str(mcalorie_lose)+' calories per day.')
+        #
+        print('\nYour Body Mass Index is: '+mbmi)
         print('Your personal BMI formula is = '+str(weightKG)+' / '+str(heightCM)+' / '+str(heightCM)+' × '+str(defi)+'\n')
-        print('Your Ideal Body Weight is: '+mibw+' KG')
+        #
+        print('Your Ideal Body Weight for your height and age is: '+mibw+'kg')
         print('Your personal IBW formula is = '+str(ibwform)+' × '+str(heightCM)+' × '+str(heightCM)+' / '+str(defi)+'\n')
 
         # Pause code from ending...
         os.system("pause")
     
+    # Continue for IF statement for male or female entry
     elif morf == "female":
-
-        # Female Section
-        #print('Female Entry')
+            
+        # Female Equation formula
+        wbmranswer=wmbmr+ww+wh-wa
+        wbmr = str(round(wbmranswer, 0))
+        wbmianswer = weightKG/heightCM/heightCM*defi
+        wbmi = str(round(wbmianswer, 2))
+        wibwanswer = ibwform*heightCM*heightCM/defi
+        wibw = str(round(wibwanswer, 1))
+        wmetanswer = timesecs*met*calmet*weightKG/meta
+        wmetadd = wmetanswer+wbmranswer
+        wmet = str(round(wmetadd, 0))
+        wcalorie_lose_answer = wmetadd-calorie_lose
+        wcalorie_lose = str(round(wcalorie_lose_answer))
+     
         print('\nPlease wait '+fname+' working. . . . . . . . . . .')
         time.sleep(5)
         os.system("cls")
-        print('This is your Calorie Intake Guide '+fname+'\n')
-        print('Your Basal Metabolic Rate (BMR) is: '+wbmr+' kcals')
-        print('Your personal BMR formula is = 665 + ( 9.563 × '+str(weightKG)+' ) + ( 1.850 × '+str(heightCM)+' ) – ( 4.676 × '+str(age)+' )\n')
-        print('Your Body Mass Index is: '+wbmi)
+        print('This is your Calorie Intake Guide '+fname+'')
+        #
+        print('\nYour Age: '+str(age)+' | Your Height: '+str(heightCM)+'cm | Your Weight: '+str(weightKG)+'kg | Your Activity Rate: '+str(met))
+        print('Your Activity Time: '+str(timemin)+' mins | Your Gender: '+str(morf)+' | Calorie Drop: '+str(calorie_lose))
+        print('\n------------------------------------------------------------------------------')
+        #
+        print('\nYour estimated Basal Metabolic Rate (BMR) is: '+wbmr+' kcals')
+        print('Your personal BMR formula is = 66.5 + ( 13.75 × '+str(weightKG)+' ) + ( 5.003 × '+str(heightCM)+' ) – ( 6.755 × '+str(age)+' )\n')
+        #
+        print('Your calorie intake to maintain body weight is: '+str(round(wmetanswer, 0))+' + '+str(round(wbmranswer, 0))+' = '+str(wmet)+' - This is estimated based on your answers!')
+        print('Your formula to maintan body weight is = '+str(timemin)+' × '+str(met)+' × '+str(calmet)+' × '+str(weightKG)+' / '+str(meta))
+        #
+        print('\nYou have chosen to lose '+str(calorie_lose)+' calories per day.')
+        print('To lose the desired weight your calorie intake per day should not exceed: '+str(wcalorie_lose)+' calories per day')
+        #
+        print('\nYour Body Mass Index is: '+wbmi)
         print('Your personal BMI formula is = '+str(weightKG)+' / '+str(heightCM)+' / '+str(heightCM)+' × '+str(defi)+'\n')
-        print('Your Ideal Body Weight is: '+wibw+' KG')
+        #
+        print('Your Ideal Body Weight for your height and age is: '+wibw+'kg')
         print('Your personal IBW formula is = '+str(ibwform)+' × '+str(heightCM)+' × '+str(heightCM)+' / '+str(defi)+'\n')
 
         # Pause code from ending...
         os.system("pause")
+    
+    # Continue for IF statement for male or female entry
+    else:
+        print('Invalid entry...  Try again...')
  
-elif answer == 'no': 
+elif answer == 'no':
+    print('\nGoodbye')
+    time.sleep(2)
     os.system('cls')
